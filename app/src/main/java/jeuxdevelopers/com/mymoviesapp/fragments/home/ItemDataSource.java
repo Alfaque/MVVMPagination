@@ -30,6 +30,8 @@ public class ItemDataSource extends PageKeyedDataSource<Integer, Result> {
                     networkResponseMutableLiveData.postValue(new NetworkResponse(NetworkResponse.Status.SUCCESS, ""));
                     callback.onResult(response.body().getResults(), null, FIRST_PAGE + 1);
                 } else {
+
+                    //
                     networkResponseMutableLiveData.postValue(new NetworkResponse(NetworkResponse.Status.ERROR, "Response is Unsuccesfull"));
 
                 }
